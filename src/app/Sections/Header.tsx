@@ -13,7 +13,7 @@ const Navbar = () => {
 
     return (
         <>
-            <header className='w-full lg:flex my-8 hidden'>
+            <header className=' w-10/12 mx-auto lg:flex my-8 hidden'>
                 <Link href={"/"}>
                     <Image src={Logo} alt='logo' className='object-contain mt-0 lg:mt-[0.6rem]' />
                 </Link>

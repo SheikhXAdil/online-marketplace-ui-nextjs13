@@ -11,7 +11,7 @@ import Featured4 from "/public/Featured4.webp"
 
 const Hero = () => {
     return (
-        <section className='flex flex-col xl:flex-row justify-center'>
+        <section className=' w-10/12 mx-auto flex flex-col xl:flex-row justify-center'>
 
             {/* left section */}
             <div className='flex w-full xl:w-1/2 flex-col justify-center gap-10'>
