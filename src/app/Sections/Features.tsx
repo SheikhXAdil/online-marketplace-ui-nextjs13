@@ -17,8 +17,8 @@ const Features = () => {
 
                 <div className='w-full xl:w-2/5'>
                     <div className='relative z-10 grid grid-cols-2 items-center justify-center gap-8'>
-                        <div className='z-0 text-[#212121] absolute text-[6rem] md:text-[7rem] leading-none font-extrabold opacity-[0.07]'>
-                            Different from others
+                        <div className='absolute'>
+                            <h1 className="z-0 text-[#212121] text-[5rem] md:text-[7rem] leading-none font-extrabold opacity-[0.07]">Different from others</h1>
                         </div>
                         {featurs.map((feature) => {
                             return (
@@ -37,7 +37,7 @@ const Features = () => {
                         <p className="text-lg">
                             This piece is ethically crafted in our small family-owned workshop in Peru with unmatched attention to detail and care. The Natural color is the actual natural color of the fiber, undyed and 100% traceable.
                         </p>
-                        <Button className="w-3/5">See All Products</Button>
+                        <Button className="w-1/2 xl:w-3/5">See All Products</Button>
                     </div>
                 </div>
 
