@@ -26,8 +26,8 @@ const Navbar = () => {
                 </div>
 
                 <div className='relative'>
-                    <ShoppingCartIcon className='flex w-10 h-10 p-3 rounded-full bg-slate-200 justify-center items-center' />
-                    <span className='flex justify-center items-center w-5 h-5 absolute -top-1 -right-1 bg-red-500 rounded-full text-white'>1</span>
+                    <ShoppingCartIcon className='flex w-11 h-11 p-3 rounded-full bg-[#f1f1f1] justify-center items-center' />
+                    <span className='flex justify-center items-center w-4 h-4 absolute -top-1 -right-1 bg-red-500 rounded-full text-white'>1</span>
                 </div>
 
             </header>
