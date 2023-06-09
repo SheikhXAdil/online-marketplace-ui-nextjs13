@@ -28,9 +28,9 @@ const Footer = () => {
                     <div className='flex-1'>
                         <h2 className='text-2xl font-semibold mb-6'>Company</h2>
                         <ul>
-                            {companyItems.map((company) => {
+                            {companyItems.map((company, index) => {
                                 return (
-                                    <li className='text-lg my-2 cursor-pointer'>{company}</li>
+                                    <li key={index} className='text-lg my-2 cursor-pointer'>{company}</li>
                                 )
                             })}
                         </ul>
@@ -39,9 +39,9 @@ const Footer = () => {
                     <div className='flex-1'>
                         <h2 className='text-2xl font-semibold mb-6'>Support</h2>
                         <ul>
-                            {supportItems.map((support) => {
+                            {supportItems.map((support, index) => {
                                 return (
-                                    <li className='text-lg my-2 cursor-pointer'>{support}</li>
+                                    <li key={index} className='text-lg my-2 cursor-pointer'>{support}</li>
                                 )
                             })}
                         </ul>
@@ -50,9 +50,9 @@ const Footer = () => {
                     <div className='flex-1'>
                         <h2 className='text-2xl font-semibold mb-6'>Contact</h2>
                         <ul>
-                            {contactItems.map((contact) => {
+                            {contactItems.map((contact, index) => {
                                 return (
-                                    <li className='text-lg my-2 cursor-pointer'>{contact}</li>
+                                    <li key={index} className='text-lg my-2 cursor-pointer'>{contact}</li>
                                 )
                             })}
                         </ul>

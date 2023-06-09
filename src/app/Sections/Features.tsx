@@ -1,6 +1,7 @@
 import Image from "next/image"
 import feature from "/public/feature.webp"
 import { Button } from "@/components/ui/button"
+import Link from "next/link"
 
 
 
@@ -20,9 +21,9 @@ const Features = () => {
                         <div className='absolute'>
                             <h1 className="z-0 text-[#212121] text-[5rem] md:text-[7rem] leading-none font-extrabold opacity-[0.07]">Different from others</h1>
                         </div>
-                        {featurs.map((feature) => {
+                        {featurs.map((feature, index) => {
                             return (
-                                <div className="w-full">
+                                <div key={index} className="w-full">
                                     <h6 className="text-xl font-bold text-[#212121] mb-4 -tracking-tight">{feature}</h6>
                                     <p className="text-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                                 </div>
@@ -37,7 +38,9 @@ const Features = () => {
                         <p className="text-lg">
                             This piece is ethically crafted in our small family-owned workshop in Peru with unmatched attention to detail and care. The Natural color is the actual natural color of the fiber, undyed and 100% traceable.
                         </p>
-                        <Button className="w-1/2 xl:w-3/5">See All Products</Button>
+                        <Link href={"/products"}>
+                            <Button className="w-1/2 xl:w-3/5">See All Products</Button>
+                        </Link>
                     </div>
                 </div>
 

@@ -1,19 +1,39 @@
 'use client'
 import {
     NavigationMenu,
-    NavigationMenuLink,
+    NavigationMenuItem,
     NavigationMenuList,
 } from "@/components/ui/navigation-menu"
+import Link from "next/link"
 
-const categories = ["Female", "Male", "Kids", "All Products"]
+const links = [
+    {
+        title: "Female",
+        linkText: "female"
+    },
+    {
+        title: "Male",
+        linkText: "male"
+    },
+    {
+        title: "Kids",
+        linkText: "kids"
+    },
+    {
+        title: "All products",
+        linkText: "products"
+    },
+]
 
 const Menu = () => {
     return (
         <NavigationMenu className="mx-auto">
             <NavigationMenuList className="flex-col lg:flex-row gap-y-4 lg:gap-x-8">
-                {categories.map((category, index) => {
+                {links.map((link, index) => {
                     return (
-                        <NavigationMenuLink key={index} className="text-lg font-medium cursor-pointer">{category}</NavigationMenuLink>
+                        <Link href={`/${link.linkText}`} key={index}>
+                            <NavigationMenuItem className="text-lg font-medium cursor-pointer">{link.title}</NavigationMenuItem>
+                        </Link>
                     )
                 })}
             </NavigationMenuList>

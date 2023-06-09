@@ -1,4 +1,5 @@
 import Footer from './Sections/Footer'
+import Header from "@/app/Sections/Header"
 import './globals.css'
 import { Inter } from 'next/font/google'
 
@@ -16,13 +17,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <main className=' flex flex-col gap-24'>
+      <body className={`${inter.className} flex flex-col gap-4`}>
+        <Header />
+        <main className='flex flex-col gap-24'>
           {children}
         </main>
-        <footer>
-          <Footer />
-        </footer>
+        <Footer />
       </body>
     </html>
   )

@@ -6,7 +6,7 @@ const NewsLetter = () => {
     return (
         <section className='relative w-10/12 mx-auto my-16 flex items-center justify-center'>
             <div className='absolute'>
-                <h1 className='z-0 text-[#212121] text-[4rem] sm:text-[6rem] md:text-[7rem] leading-none font-extrabold opacity-[0.07]'>
+                <h1 className='z-0 text-[#212121] text-[3.5rem] sm:text-[6rem] md:text-[7rem] leading-none font-extrabold opacity-[0.07]'>
                     NEWSLETTER
                 </h1>
             </div>

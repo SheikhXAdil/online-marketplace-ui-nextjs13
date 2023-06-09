@@ -13,7 +13,7 @@ const Navbar = () => {
 
     return (
         <>
-            <header className=' w-10/12 mx-auto lg:flex my-8 hidden'>
+            <header className='w-10/12 mx-auto lg:flex my-8 hidden'>
                 <Link href={"/"}>
                     <Image src={Logo} alt='logo' className='object-contain mt-0 lg:mt-[0.6rem]' />
                 </Link>
@@ -32,7 +32,7 @@ const Navbar = () => {
 
             </header>
 
-            <div className='lg:hidden flex justify-between my-8'>
+            <div className='lg:hidden w-10/12 mx-auto flex justify-between my-8'>
                 <Link href={"/"}>
                     <Image src={Logo} alt='logo' className='object-contain mt-0 lg:mt-[0.6rem]' />
                 </Link>
