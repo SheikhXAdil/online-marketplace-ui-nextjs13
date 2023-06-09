@@ -22,9 +22,9 @@ const Product = ({ params }: { params: { slug: string } }) => {
             <section className=" w-10/12 mx-auto flex flex-col gap-8">
                 <div className="min-h-screen grid grid-cols-8 grid-rows-6 py-12">
                     <div className="col-span-1 row-span-4 flex flex-col gap-2">
-                        {product.pictures.map((picture) => {
+                        {product.pictures.map((picture, index) => {
                             return (
-                                <Image src={picture} alt={product.title} width={100} height={100} className="cursor-pointer" onMouseEnter={() => { setMainPic(picture) }} onMouseLeave={() => { setMainPic(product.pictures[0]) }} />
+                                <Image key={index} src={picture} alt={product.title} width={100} height={100} className="cursor-pointer" onMouseEnter={() => { setMainPic(picture) }} onMouseLeave={() => { setMainPic(product.pictures[0]) }} />
                             )
                         })}
                     </div>
@@ -51,17 +51,17 @@ const Product = ({ params }: { params: { slug: string } }) => {
 
                     <div className='mt-8 bg-black h-[0.1rem]' />
 
-                    <div className="flex flex-col sm:flex-row justify-between w-full">
+                    <div className="flex flex-col sm:flex-row justify-between w-full gap-6">
 
-                        <h3 className="text-xl font-bold w-1/3">PRODUCT DETAILS</h3>
-                        <p className="text-lg w-2/3">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa incidunt porro cum excepturi est, obcaecati aut minus ratione reprehenderit aliquam, quia eveniet necessitatibus nulla perferendis nobis! Nostrum facilis dolorum eveniet dignissimos aliquid explicabo, eos, quis voluptate corporis ipsam distinctio ratione accusantium quibusdam voluptates excepturi repellendus nam perspiciatis non molestias facere.</p>
+                        <h3 className="text-xl font-bold w-full sm:w-1/3">PRODUCT DETAILS</h3>
+                        <p className="text-lg w-full sm:w-2/3">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa incidunt porro cum excepturi est, obcaecati aut minus ratione reprehenderit aliquam, quia eveniet necessitatibus nulla perferendis nobis! Nostrum facilis dolorum eveniet dignissimos aliquid explicabo, eos, quis voluptate corporis ipsam distinctio ratione accusantium quibusdam voluptates excepturi repellendus nam perspiciatis non molestias facere.</p>
 
                     </div>
 
-                    <div className="flex flex-col sm:flex-row justify-between w-full">
+                    <div className="flex flex-col sm:flex-row justify-between w-full gap-6">
 
-                        <h3 className="text-xl font-bold w-1/3">PRODUCT DETAILS</h3>
-                        <ul className="flex flex-col gap-4 mx-12 w-2/3 list-disc font-semibold">
+                        <h3 className="text-xl font-bold w-full sm:w-1/3">PRODUCT DETAILS</h3>
+                        <ul className="flex flex-col gap-4 mx-4 sm:mx-12 w-full sm:w-2/3 list-disc font-semibold">
                             <li>Hand wash using cold water.</li>
                             <li>Do not using bleach.</li>
                             <li>Hang it to dry.</li>
