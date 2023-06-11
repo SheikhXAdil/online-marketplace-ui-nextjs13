@@ -33,13 +33,13 @@ const Navbar = () => {
             </header>
 
             <div className='lg:hidden w-10/12 mx-auto flex justify-between my-8'>
-                <Link href={"/"}>
+                <Link href={"/"} >
                     <Image src={Logo} alt='logo' className='object-contain mt-0 lg:mt-[0.6rem]' />
                 </Link>
                 <AlignJustify className='scale-125' onClick={() => setToggleMenu(true)} />
                 {toggleMenu && (
                     <div className='fixed top-0 left-0 w-full h-screen bg-white flex flex-col justify-center items-center z-10'>
-                        <Link href={"/"}>
+                        <Link href={"/"} >
                             <Image src={Logo} alt='logo' width={140} height={25} className='object-contain mt-0 lg:mt-[0.6rem] absolute top-12 left-12' />
                         </Link>
                         <X className='absolute top-12 right-12 scale-125' onClick={() => setToggleMenu(false)} />
