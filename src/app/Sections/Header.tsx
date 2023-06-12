@@ -10,6 +10,9 @@ import Link from 'next/link'
 
 const Navbar = () => {
     const [toggleMenu, setToggleMenu] = useState(false)
+    const handleMenu = (state: boolean) => {
+        setToggleMenu(state)
+    }
 
     return (
         <>
@@ -18,7 +21,7 @@ const Navbar = () => {
                     <Image src={Logo} alt='logo' className='object-contain mt-0 lg:mt-[0.6rem]' />
                 </Link>
 
-                <Menu />
+                <Menu handleMenu={handleMenu} />
 
                 <div className='flex mx-auto border border-input'>
                     <SearchIcon className='my-auto w-5 h-5' />
@@ -36,18 +39,18 @@ const Navbar = () => {
                 <Link href={"/"} >
                     <Image src={Logo} alt='logo' className='object-contain mt-0 lg:mt-[0.6rem]' />
                 </Link>
-                <AlignJustify className='scale-125' onClick={() => setToggleMenu(true)} />
+                <AlignJustify className='scale-125' onClick={() => handleMenu(true)} />
                 {toggleMenu && (
                     <div className='fixed top-0 left-0 w-full h-screen bg-white flex flex-col justify-center items-center z-10'>
-                        <Link href={"/"} >
+                        <Link href={"/"} onClick={() => handleMenu(false)} >
                             <Image src={Logo} alt='logo' width={140} height={25} className='object-contain mt-0 lg:mt-[0.6rem] absolute top-12 left-12' />
                         </Link>
-                        <X className='absolute top-12 right-12 scale-125' onClick={() => setToggleMenu(false)} />
+                        <X className='absolute top-12 right-12 scale-125' onClick={() => handleMenu(false)} />
                         <div className='my-4 lg:my-0 relative'>
                             <ShoppingCartIcon className='flex w-10 h-10 p-3 rounded-full bg-slate-200 justify-center items-center' />
                             <span className='flex justify-center items-center w-5 h-5 absolute -top-1 -right-1 bg-red-500 rounded-full text-white'>1</span>
                         </div>
-                        <Menu />
+                        <Menu handleMenu={handleMenu} />
                     </div>
                 )}
             </div>

@@ -17,7 +17,7 @@ const shuffleArray = (array: product[]) => {
 const ProductSection = () => {
 
     const shuffledProducts = shuffleArray(products)
-    const fourRandomProducts = shuffledProducts.slice(0, 4)
+    const fourRandomProducts = shuffledProducts.slice(0, 3)
 
     return (
         <section className='w-10/12 mx-auto flex flex-col gap-10'>
@@ -27,10 +27,12 @@ const ProductSection = () => {
             </div>
 
             <div>
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 w-full gap-4">
+                <div className="flex flex-wrap justify-center w-full">
                     {fourRandomProducts.map((product) => {
                         return (
-                            <ProductCard key={product.id} title={product.title} clothingCategory={product.clothingCategory} linkText={product.linkText} price={product.price} picture={product.pictures[0]} />
+                            <div key={product.id} className="w-full sm:w-1/3 flex items-center justify-center">
+                                <ProductCard title={product.title} clothingCategory={product.clothingCategory} linkText={product.linkText} price={product.price} picture={product.pictures[0]} />
+                            </div>
                         )
                     })}
                 </div>
